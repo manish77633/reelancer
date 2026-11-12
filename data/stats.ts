@@ -44,24 +44,24 @@ export const processSteps: ProcessStep[] = [
     step: "01",
     title: "Discover",
     timecode: "00:00:02:15",
-    description: "Audit past creative, map audience friction points, and deconstruct top 3 competitor hook angles.",
+    description: "We get to know your brand, your audience and what you want to achieve.",
   },
   {
     step: "02",
     title: "Strategy",
     timecode: "00:00:06:00",
-    description: "Script 20+ modular 9:16 concepts targeting specific cognitive biases and emotional triggers.",
+    description: "You get a clear creative plan, fresh ideas and scripts to review.",
   },
   {
     step: "03",
     title: "Ship",
     timecode: "00:00:10:18",
-    description: "Produce, color-grade, and launch dynamic budget creative testing matrices within 14 days.",
+    description: "We shoot, edit and launch your content, keeping you involved along the way.",
   },
   {
     step: "04",
     title: "Scale",
     timecode: "00:00:14:24",
-    description: "Double down on winning hooks, automate comment-to-DM flows, and scale ad spend efficiently.",
+    description: "We review the results, improve what works and plan your next steps.",
   },
 ];

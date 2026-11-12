@@ -9,25 +9,25 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "#0A0A0A",
+        background: "#FCFCFA",
         surface: {
-          DEFAULT: "#111111",
-          card: "#141414",
-          muted: "#181818",
+          DEFAULT: "#F0F3EF",
+          card: "#F0F3EF",
+          muted: "#E8EEE3",
         },
         offwhite: {
-          DEFAULT: "#EDEAE3",
-          muted: "#8A8A85",
-          dim: "#4A4A46",
+          DEFAULT: "#202820",
+          muted: "#59645A",
+          dim: "#647363",
         },
         lime: {
-          DEFAULT: "#C6FF3D",
-          hover: "#D6FF66",
-          dim: "rgba(198, 255, 61, 0.15)",
+          DEFAULT: "#24764F",
+          hover: "#195c3c",
+          dim: "rgba(182, 154, 128, 0.15)",
         },
-        live: "#FF5A36",
-        hairline: "rgba(237, 234, 227, 0.12)",
-        "hairline-bright": "rgba(237, 234, 227, 0.25)",
+        live: "#24764F",
+        hairline: "rgba(33, 27, 22, 0.16)",
+        "hairline-bright": "rgba(33, 27, 22, 0.3)",
       },
       fontFamily: {
         serif: ["var(--font-serif)", "Georgia", "serif"],

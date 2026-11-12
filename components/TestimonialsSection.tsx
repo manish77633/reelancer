@@ -28,7 +28,7 @@ export default function TestimonialsSection() {
   return (
     <section id="testimonials" className="py-20 md:py-28 relative border-b border-hairline">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        
+
         {/* Section Header */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-16 border-b border-hairline pb-6">
           <div>
@@ -56,7 +56,7 @@ export default function TestimonialsSection() {
             return (
               <div
                 key={item.id}
-                className="p-6 bg-[#0E0E0E] border border-hairline hover:border-lime/40 transition-colors flex flex-col justify-between"
+                className="p-6 bg-surface border border-hairline hover:border-lime/40 transition-colors flex flex-col justify-between"
               >
                 <div>
                   {/* DM Header with Avatar Image */}

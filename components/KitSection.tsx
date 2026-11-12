@@ -61,7 +61,7 @@ export default function KitSection() {
   return (
     <section id="kit" className="py-20 md:py-28 relative border-b border-hairline">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        
+
         {/* Section Header with Tab Toggles */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-12 border-b border-hairline pb-6">
           <div>
@@ -76,7 +76,7 @@ export default function KitSection() {
           </div>
 
           {/* Viewfinder Tabs Switcher */}
-          <div className="grid grid-cols-2 sm:flex sm:items-center border border-hairline bg-[#111111] p-1 font-mono text-xs w-full sm:w-auto">
+          <div className="grid grid-cols-2 sm:flex sm:items-center border border-hairline bg-surface p-1 font-mono text-xs w-full sm:w-auto">
             <button
               onClick={() => setActiveTab("gear")}
               className={`px-3 sm:px-5 py-2 uppercase tracking-wider transition-colors text-center text-[10px] sm:text-xs ${
@@ -108,10 +108,10 @@ export default function KitSection() {
               return (
                 <div
                   key={item.id}
-                  className="group relative p-6 bg-[#0E0E0E] border border-hairline hover:border-lime/50 transition-colors flex flex-col justify-between"
+                  className="group relative p-6 bg-surface border border-hairline hover:border-lime/50 transition-colors flex flex-col justify-between"
                 >
-                  <div className="bracket-tl opacity-0 group-hover:opacity-100 transition-opacity" />
-                  <div className="bracket-br opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <div className="bracket-tl opacity-100 transition-opacity" />
+                  <div className="bracket-br opacity-100 transition-opacity" />
 
                   <div>
                     <div className="flex items-center justify-between mb-4 border-b border-hairline pb-3">
@@ -152,9 +152,9 @@ export default function KitSection() {
               return (
                 <div
                   key={tool.id}
-                  className="p-5 bg-[#0E0E0E] border border-hairline hover:border-lime/50 transition-colors flex items-start gap-4"
+                  className="p-5 bg-surface border border-hairline hover:border-lime/50 transition-colors flex items-start gap-4"
                 >
-                  <div className="w-10 h-10 border border-hairline bg-[#141414] flex items-center justify-center text-lime shrink-0">
+                  <div className="w-10 h-10 border border-hairline bg-surface flex items-center justify-center text-lime shrink-0">
                     <Icon className="w-5 h-5" />
                   </div>
 
@@ -186,4 +186,3 @@ export default function KitSection() {
     </section>
   );
 }
-

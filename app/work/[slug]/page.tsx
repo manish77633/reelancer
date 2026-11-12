@@ -71,9 +71,9 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
     <div className="min-h-screen bg-background relative selection:bg-lime selection:text-black">
       <Navbar />
 
-      <main className="pt-24 sm:pt-28 pb-20 md:pt-36 md:pb-28">
+      <main className="case-study pt-14 pb-20 md:pt-20 md:pb-28">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
-          
+
           {/* Breadcrumb Navigation */}
           <div className="mb-8">
             <Link
@@ -81,7 +81,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
               className="inline-flex items-center gap-2 font-mono text-xs text-offwhite-dim hover:text-lime transition-colors group"
             >
               <ArrowLeft className="w-3.5 h-3.5 group-hover:-translate-x-1 transition-transform" />
-              <span>[← BACK TO REELS TIMELINE]</span>
+              <span>Back to selected work</span>
             </Link>
           </div>
 
@@ -117,7 +117,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
 
           {/* Viewfinder 9:16 Reel Card + Metrics Scorecard */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16 items-start">
-            
+
             {/* 9:16 Vertical Reel Frame Mockup */}
             <div className="lg:col-span-5 flex justify-center">
               <div className="w-full max-w-[320px] aspect-[9/16] bg-[#111111] border border-hairline p-1 relative flex flex-col justify-between shadow-2xl overflow-hidden">
@@ -146,7 +146,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {project.results.metrics.map((m, idx) => (
-                  <div key={idx} className="p-5 bg-[#0E0E0E] border border-hairline">
+                  <div key={idx} className="p-5 bg-surface border border-hairline">
                     <span className="font-mono text-[10px] text-offwhite-dim uppercase tracking-wider block mb-1">
                       {m.label}
                     </span>
@@ -161,7 +161,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
               </div>
 
               {/* Sprint Stack Pills */}
-              <div className="p-4 bg-[#0E0E0E] border border-hairline mt-2">
+              <div className="p-4 bg-surface border border-hairline mt-2">
                 <span className="font-mono text-[10px] text-offwhite-dim uppercase tracking-wider block mb-2">
                   [SPRINT STACK USED]
                 </span>
@@ -182,9 +182,9 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
 
           {/* Deep Dive Case Study Content */}
           <div className="space-y-10">
-            
+
             {/* The Goal & Objective */}
-            <section className="p-6 sm:p-8 bg-[#0E0E0E] border border-hairline">
+            <section className="p-6 sm:p-8 bg-surface border border-hairline">
               <span className="font-mono text-xs text-lime uppercase tracking-wider block mb-2">
                 [01 // THE OBJECTIVE]
               </span>
@@ -201,7 +201,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
             </section>
 
             {/* Growth Strategy */}
-            <section className="p-6 sm:p-8 bg-[#0E0E0E] border border-hairline">
+            <section className="p-6 sm:p-8 bg-surface border border-hairline">
               <span className="font-mono text-xs text-lime uppercase tracking-wider block mb-2">
                 [02 // THE FRAMEWORK]
               </span>
@@ -224,7 +224,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
             </section>
 
             {/* Execution Roadmap */}
-            <section className="p-6 sm:p-8 bg-[#0E0E0E] border border-hairline">
+            <section className="p-6 sm:p-8 bg-surface border border-hairline">
               <span className="font-mono text-xs text-lime uppercase tracking-wider block mb-2">
                 [03 // TIMELINE]
               </span>
@@ -250,7 +250,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
             </section>
 
             {/* Key Learnings */}
-            <section className="p-6 sm:p-8 bg-[#0E0E0E] border border-hairline">
+            <section className="p-6 sm:p-8 bg-surface border border-hairline">
               <span className="font-mono text-xs text-lime uppercase tracking-wider block mb-2">
                 [04 // STRATEGIC TAKEAWAYS]
               </span>
@@ -274,7 +274,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-16 pt-8 border-t border-hairline">
             <Link
               href={`/work/${prevProject.slug}`}
-              className="p-5 bg-[#0E0E0E] border border-hairline hover:border-lime transition-colors group flex flex-col"
+              className="p-5 bg-surface border border-hairline hover:border-lime transition-colors group flex flex-col"
             >
               <span className="font-mono text-[10px] text-offwhite-dim mb-1 flex items-center gap-1.5">
                 <ArrowLeft className="w-3.5 h-3.5 group-hover:-translate-x-1 transition-transform" />
@@ -287,7 +287,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
 
             <Link
               href={`/work/${nextProject.slug}`}
-              className="p-5 bg-[#0E0E0E] border border-hairline hover:border-lime transition-colors group flex flex-col text-right sm:items-end"
+              className="p-5 bg-surface border border-hairline hover:border-lime transition-colors group flex flex-col text-right sm:items-end"
             >
               <span className="font-mono text-[10px] text-offwhite-dim mb-1 flex items-center gap-1.5">
                 <span>NEXT REEL</span>
@@ -300,7 +300,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
           </div>
 
           {/* Bottom Action Card */}
-          <div className="mt-12 p-8 bg-[#0E0E0E] border border-lime text-center relative">
+          <div className="mt-12 p-8 bg-surface border border-lime text-center relative">
             <div className="bracket-tl" />
             <div className="bracket-tr" />
             <div className="bracket-bl" />

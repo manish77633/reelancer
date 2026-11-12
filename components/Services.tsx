@@ -40,20 +40,20 @@ export default function Services() {
   };
 
   const marqueeItems = [
-    "DIRECT-RESPONSE REELS",
-    "PAID SOCIAL SCALING",
-    "CAPI SERVER-SIDE ATTRIBUTION",
-    "MOBILE QUIZ FUNNELS",
-    "COMMENT-TO-DM PIPELINES",
+    "SHORT VIDEOS",
+    "SOCIAL ADS",
+    "CLEAR RESULTS",
+    "LANDING PAGES",
+    "INSTAGRAM AUTOMATION",
     "CREATOR BRAND SYSTEMS",
-    "HOOK VELOCITY SPRINT",
+    "FRESH CREATIVE IDEAS",
   ];
 
   return (
     <section id="services" className="py-20 md:py-28 relative border-b border-hairline">
-      
+
       {/* 1. Full-Bleed Marquee Strip */}
-      <div className="w-full overflow-hidden border-y border-hairline py-3 bg-[#0C0C0C] mb-16 select-none">
+      <div className="w-full overflow-hidden border-y border-hairline py-3 bg-surface-muted mb-16 select-none">
         <div className="flex whitespace-nowrap animate-marquee">
           {[...marqueeItems, ...marqueeItems, ...marqueeItems, ...marqueeItems].map((item, idx) => (
             <div key={idx} className="flex items-center gap-6 mx-4">
@@ -67,7 +67,7 @@ export default function Services() {
       </div>
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        
+
         {/* Section Header with Viewfinder Timecode */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-16 border-b border-hairline pb-6">
           <div>
@@ -77,7 +77,7 @@ export default function Services() {
               <span className="text-offwhite-muted uppercase">[THE FEED / CORE OFFERS]</span>
             </div>
             <h2 className="font-sans font-bold text-3xl sm:text-4xl text-offwhite tracking-tight">
-              Modular sprint offerings.
+              What can we help you create?
             </h2>
           </div>
 
@@ -114,7 +114,7 @@ export default function Services() {
                 )}
 
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
-                  
+
                   {/* Column 1: Number & Category */}
                   <div className="lg:col-span-2 flex items-center lg:flex-col lg:items-start justify-between">
                     <span className="font-mono font-bold text-3xl sm:text-4xl text-offwhite-dim group-hover:text-lime transition-colors">

@@ -1,0 +1,9 @@
+"use client";
+import {useEffect,useRef,useState} from 'react';
+import {Play,Pause,Volume2,VolumeX} from 'lucide-react';
+export default function ReelPlayer({src,poster,title,compact=false}:{src:string;poster:string;title:string;compact?:boolean}){
+ const ref=useRef<HTMLVideoElement>(null);const[playing,setPlaying]=useState(false);const[muted,setMuted]=useState(true);const[error,setError]=useState(false);
+ useEffect(()=>{const v=ref.current;if(!v)return;const observer=new IntersectionObserver(entries=>{if(!entries[0].isIntersecting)v.pause()},{threshold:.15});observer.observe(v);const pauseOthers=(e:Event)=>{if((e as CustomEvent).detail!==v)v.pause()};window.addEventListener('reelancer-video-play',pauseOthers);return()=>{observer.disconnect();window.removeEventListener('reelancer-video-play',pauseOthers)}},[]);
+ async function toggle(){const v=ref.current;if(!v)return;if(!v.paused){v.pause();return}window.dispatchEvent(new CustomEvent('reelancer-video-play',{detail:v}));try{await v.play();setError(false)}catch{setError(true)}}
+ return <div className={`rp-player ${compact?'rp-compact':''}`}><video ref={ref} src={src} poster={poster} preload="none" controls={playing} playsInline muted={muted} loop onPlay={()=>setPlaying(true)} onPause={()=>setPlaying(false)} onError={()=>setError(true)} aria-label={title}/><button className={`rp-toggle ${playing?'is-playing':''}`} type="button" onClick={toggle} aria-label={`${playing?'Pause':'Play'} ${title}`}>{playing?<Pause size={24} fill="currentColor"/>:<Play size={24} fill="currentColor"/>}</button><button type="button" className="rp-mute" onClick={()=>setMuted(!muted)} aria-label={`${muted?'Unmute':'Mute'} ${title}`}>{muted?<VolumeX size={18}/>:<Volume2 size={18}/>}</button><span className="rp-status">{playing?'Playing':'Watch sample'}</span>{error&&<p className="rp-error" role="status">Video could not play. <a href={src}>Open video</a></p>}</div>
+}

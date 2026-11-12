@@ -80,7 +80,7 @@ export default function ContactSection() {
   return (
     <section id="contact" className="py-20 md:py-28 relative border-b border-hairline">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        
+
         {/* Section Header */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-16 border-b border-hairline pb-6">
           <div>
@@ -90,7 +90,7 @@ export default function ContactSection() {
               <span className="text-offwhite-muted uppercase">[TRANSMIT / SLIDE INTO THE DMS]</span>
             </div>
             <h2 className="font-sans font-bold text-3xl sm:text-5xl text-offwhite tracking-tight">
-              Ready to roll? Slide into the DMs.
+              Ready to roll? Let’s make something great.
             </h2>
           </div>
 
@@ -100,11 +100,11 @@ export default function ContactSection() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
-          
+
           {/* Left Column: Direct Info, Email & WhatsApp */}
           <div className="lg:col-span-5 flex flex-col gap-6">
-            
-            <div className="p-6 bg-[#0E0E0E] border border-hairline">
+
+            <div className="p-6 bg-surface border border-hairline">
               <span className="font-mono text-[10px] text-offwhite-dim uppercase tracking-wider block mb-2">
                 [DIRECT FREQUENCY]
               </span>
@@ -138,21 +138,21 @@ export default function ContactSection() {
             </div>
 
             {/* Quick Sprints Standard */}
-            <div className="p-6 bg-[#0A0A0A] border border-hairline font-mono text-xs text-offwhite-muted space-y-2">
+            <div className="p-6 bg-surface border border-hairline font-mono text-xs text-offwhite-muted space-y-2">
               <span className="text-offwhite font-bold block">
                 [REELANCER SPEC SHEET]
               </span>
-              <p>• Retainers renew on monthly milestones; zero lock-in.</p>
-              <p>• 100% full IP transfer of raw cuts, scripts, and ad assets.</p>
-              <p>• Dedicated client Notion portal with async approvals.</p>
+              <p>â€¢ Retainers renew on monthly milestones; zero lock-in.</p>
+              <p>â€¢ 100% full IP transfer of raw cuts, scripts, and ad assets.</p>
+              <p>â€¢ Dedicated client Notion portal with async approvals.</p>
             </div>
 
           </div>
 
           {/* Right Column: Inbound Lead Form */}
           <div className="lg:col-span-7">
-            <div className="p-6 sm:p-8 bg-[#0E0E0E] border border-hairline">
-              
+            <div className="p-6 sm:p-8 bg-surface border border-hairline">
+
               {submitSuccess ? (
                 <div className="py-12 text-center">
                   <div className="w-12 h-12 border border-lime bg-lime/10 flex items-center justify-center text-lime mx-auto mb-4">
@@ -176,7 +176,7 @@ export default function ContactSection() {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-5" noValidate>
-                  
+
                   {errorMessage && (
                     <div className="p-3 bg-red-950/40 border border-red-800 text-red-200 font-mono text-xs flex items-center gap-2">
                       <AlertCircle className="w-4 h-4 text-red-400 shrink-0" />
@@ -195,7 +195,7 @@ export default function ContactSection() {
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       placeholder="e.g. Alex Thorne (Thorne Botanicals)"
-                      className={`w-full px-4 py-3 bg-[#141414] border text-xs sm:text-sm text-offwhite placeholder-offwhite-dim focus:outline-none focus:border-lime font-sans transition-colors ${
+                      className={`w-full px-4 py-3 bg-surface border text-xs sm:text-sm text-offwhite placeholder-offwhite-dim focus:outline-none focus:border-lime font-sans transition-colors ${
                         formErrors.name ? "border-red-500" : "border-hairline"
                       }`}
                     />
@@ -215,7 +215,7 @@ export default function ContactSection() {
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       placeholder="alex@thornebotanicals.com"
-                      className={`w-full px-4 py-3 bg-[#141414] border text-xs sm:text-sm text-offwhite placeholder-offwhite-dim focus:outline-none focus:border-lime font-sans transition-colors ${
+                      className={`w-full px-4 py-3 bg-surface border text-xs sm:text-sm text-offwhite placeholder-offwhite-dim focus:outline-none focus:border-lime font-sans transition-colors ${
                         formErrors.email ? "border-red-500" : "border-hairline"
                       }`}
                     />
@@ -234,11 +234,11 @@ export default function ContactSection() {
                         id="service"
                         value={formData.service}
                         onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                        className="w-full px-4 py-3 bg-[#141414] border border-hairline text-xs sm:text-sm text-offwhite focus:outline-none focus:border-lime font-sans cursor-pointer"
+                        className="w-full px-4 py-3 bg-surface border border-hairline text-xs sm:text-sm text-offwhite focus:outline-none focus:border-lime font-sans cursor-pointer"
                       >
                         {servicesData.map((s) => (
-                          <option key={s.id} value={s.title} className="bg-[#141414] text-offwhite">
-                            {s.number} • {s.title}
+                          <option key={s.id} value={s.title} className="bg-surface text-offwhite">
+                            {s.number} â€¢ {s.title}
                           </option>
                         ))}
                       </select>
@@ -252,10 +252,10 @@ export default function ContactSection() {
                         id="budget"
                         value={formData.budget}
                         onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
-                        className="w-full px-4 py-3 bg-[#141414] border border-hairline text-xs sm:text-sm text-offwhite focus:outline-none focus:border-lime font-sans cursor-pointer"
+                        className="w-full px-4 py-3 bg-surface border border-hairline text-xs sm:text-sm text-offwhite focus:outline-none focus:border-lime font-sans cursor-pointer"
                       >
                         {budgetOptions.map((opt) => (
-                          <option key={opt} value={opt} className="bg-[#141414] text-offwhite">
+                          <option key={opt} value={opt} className="bg-surface text-offwhite">
                             {opt}
                           </option>
                         ))}
@@ -274,7 +274,7 @@ export default function ContactSection() {
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       placeholder="Share your current monthly revenue or traffic, what product you are scaling, and target metrics..."
-                      className={`w-full px-4 py-3 bg-[#141414] border text-xs sm:text-sm text-offwhite placeholder-offwhite-dim focus:outline-none focus:border-lime font-sans transition-colors resize-none ${
+                      className={`w-full px-4 py-3 bg-surface border text-xs sm:text-sm text-offwhite placeholder-offwhite-dim focus:outline-none focus:border-lime font-sans transition-colors resize-none ${
                         formErrors.message ? "border-red-500" : "border-hairline"
                       }`}
                     />

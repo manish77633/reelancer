@@ -4,9 +4,9 @@ import { processSteps } from "@/data/stats";
 
 export default function ProcessSection() {
   return (
-    <section id="process" className="py-20 md:py-28 relative border-b border-hairline bg-[#090909]">
+    <section id="process" className="py-20 md:py-28 relative border-b border-hairline bg-surface">
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
-        
+
         {/* Section Header */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-16 border-b border-hairline pb-6">
           <div>
@@ -16,7 +16,7 @@ export default function ProcessSection() {
               <span className="text-offwhite-muted uppercase">[WORKFLOW / 4-STEP SPRINT]</span>
             </div>
             <h2 className="font-sans font-bold text-3xl sm:text-4xl text-offwhite tracking-tight">
-              Production pipeline.
+              From first idea to final result.
             </h2>
           </div>
 
@@ -29,7 +29,7 @@ export default function ProcessSection() {
         <div className="relative border-l border-hairline ml-4 sm:ml-8 space-y-12">
           {processSteps.map((step, idx) => (
             <div key={step.step} className="relative pl-8 sm:pl-12 group">
-              
+
               {/* Film Sprocket Marker / Timeline Node */}
               <div className="absolute -left-[5px] top-1.5 w-2.5 h-2.5 bg-black border border-hairline group-hover:border-lime group-hover:bg-lime transition-colors" />
 
@@ -44,7 +44,7 @@ export default function ProcessSection() {
               </div>
 
               {/* One Sentence Crisp Copy */}
-              <div className="p-4 bg-[#0E0E0E] border border-hairline group-hover:border-lime/40 transition-colors">
+              <div className="p-4 bg-surface border border-hairline group-hover:border-lime/40 transition-colors">
                 <p className="font-sans text-sm text-offwhite-muted leading-relaxed">
                   {step.description}
                 </p>
@@ -58,4 +58,3 @@ export default function ProcessSection() {
     </section>
   );
 }
-

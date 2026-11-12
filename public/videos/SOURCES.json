@@ -1,0 +1,8 @@
+{
+  "usage": "Licensed stock footage used for creative inspiration, not claimed as client work.",
+  "clips": [
+    {"file":"coffee.mp4","creator":"Pavel Danilyuk","source":"https://www.pexels.com/video/a-close-up-shot-of-brewed-coffee-pouring-into-a-cup-4386688/","license":"https://www.pexels.com/license/"},
+    {"file":"beauty.mp4","creator":"Ivan S","source":"https://www.pexels.com/video/a-woman-applying-a-skincare-product-on-her-face-7191095/","license":"https://www.pexels.com/license/"},
+    {"file":"production.mp4","creator":"Ron Lach","source":"https://www.pexels.com/video/filming-crew-filming-a-scene-on-a-cafe-9810800/","license":"https://www.pexels.com/license/"}
+  ]
+}

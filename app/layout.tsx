@@ -1,34 +1,22 @@
 import type { Metadata, Viewport } from "next";
-import { Instrument_Serif, Inter, JetBrains_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import { siteConfig } from "@/data/site";
-import MobileTabBar from "@/components/MobileTabBar";
-import CustomCursor from "@/components/CustomCursor";
 
-const serifFont = Instrument_Serif({
-  weight: "400",
-  subsets: ["latin"],
-  style: ["normal", "italic"],
-  variable: "--font-serif",
-  display: "swap",
-});
 
-const sansFont = Inter({
-  subsets: ["latin"],
-  variable: "--font-sans",
-  display: "swap",
-});
 
-const monoFont = JetBrains_Mono({
-  subsets: ["latin"],
-  variable: "--font-mono",
-  display: "swap",
-});
+const serifFont = localFont({ src: "../public/fonts/newsreader.ttf", weight: "500", variable: "--font-serif", display: "swap" });
+const sansFont = localFont({ src: [
+ {path:"../public/fonts/archivo.ttf",weight:"400"},
+ {path:"../public/fonts/archivo-1.ttf",weight:"500"},
+ {path:"../public/fonts/archivo-2.ttf",weight:"600"},
+ {path:"../public/fonts/archivo-3.ttf",weight:"700"}
+], variable:"--font-sans", display:"swap" });
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://reelancer.vercel.app";
 
 export const viewport: Viewport = {
-  themeColor: "#0A0A0A",
+  themeColor: "#FCFCFA",
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
@@ -88,26 +76,26 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${serifFont.variable} ${sansFont.variable} ${monoFont.variable} dark`}
+      className={`${serifFont.variable} ${sansFont.variable}`}
     >
       <head>
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
       </head>
-      <body className="bg-background text-offwhite font-sans antialiased selection:bg-lime selection:text-black pb-24 md:pb-0">
+      <body className="bg-background text-offwhite font-sans antialiased selection:bg-lime selection:text-black">
         {/* Subtle camera film grain overlay */}
         <div className="film-grain" aria-hidden="true" />
-        
+
         {/* Vignette */}
         <div className="vignette" aria-hidden="true" />
 
         {/* Custom Viewfinder Cursor on Desktop */}
-        <CustomCursor />
+
 
         {/* Main Content */}
         {children}
 
         {/* Camera Control Bar (Mobile Bottom Tab Bar) */}
-        <MobileTabBar />
+
       </body>
     </html>
   );

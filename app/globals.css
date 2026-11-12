@@ -3,12 +3,12 @@
 @tailwind utilities;
 
 :root {
-  --background: #0A0A0A;
-  --offwhite: #EDEAE3;
-  --muted: #8A8A85;
-  --hairline: rgba(237, 234, 227, 0.12);
-  --lime: #C6FF3D;
-  --live: #FF5A36;
+  --background: #FCFCFA;
+  --offwhite: #202820;
+  --muted: #59645A;
+  --hairline: rgba(33, 27, 22, 0.16);
+  --lime: #24764F;
+  --live: #24764F;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -18,8 +18,8 @@
 }
 
 body {
-  background-color: #0A0A0A;
-  color: #EDEAE3;
+  background-color: #FCFCFA;
+  color: #202820;
   font-family: var(--font-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   overflow-x: hidden;
   min-height: 100vh;
@@ -28,8 +28,8 @@ body {
 }
 
 ::selection {
-  background-color: #C6FF3D;
-  color: #0A0A0A;
+  background-color: #24764F;
+  color: #FCFCFA;
 }
 
 /* Subtle Film Grain Texture Overlay */
@@ -60,8 +60,8 @@ body {
   left: 0;
   width: 12px;
   height: 12px;
-  border-top: 1.5px solid #C6FF3D;
-  border-left: 1.5px solid #C6FF3D;
+  border-top: 1.5px solid #24764F;
+  border-left: 1.5px solid #24764F;
 }
 
 .bracket-tr {
@@ -70,8 +70,8 @@ body {
   right: 0;
   width: 12px;
   height: 12px;
-  border-top: 1.5px solid #C6FF3D;
-  border-right: 1.5px solid #C6FF3D;
+  border-top: 1.5px solid #24764F;
+  border-right: 1.5px solid #24764F;
 }
 
 .bracket-bl {
@@ -80,8 +80,8 @@ body {
   left: 0;
   width: 12px;
   height: 12px;
-  border-bottom: 1.5px solid #C6FF3D;
-  border-left: 1.5px solid #C6FF3D;
+  border-bottom: 1.5px solid #24764F;
+  border-left: 1.5px solid #24764F;
 }
 
 .bracket-br {
@@ -90,13 +90,13 @@ body {
   right: 0;
   width: 12px;
   height: 12px;
-  border-bottom: 1.5px solid #C6FF3D;
-  border-right: 1.5px solid #C6FF3D;
+  border-bottom: 1.5px solid #24764F;
+  border-right: 1.5px solid #24764F;
 }
 
 /* Hairline border utility */
 .border-hairline {
-  border-color: rgba(237, 234, 227, 0.12);
+  border-color: rgba(33, 27, 22, 0.16);
 }
 
 /* Hide scrollbar utility */
@@ -114,14 +114,14 @@ body {
   height: 5px;
 }
 ::-webkit-scrollbar-track {
-  background: #0A0A0A;
+  background: #FCFCFA;
 }
 ::-webkit-scrollbar-thumb {
   background: #262626;
   border-radius: 2px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #C6FF3D;
+  background: #24764F;
 }
 
 /* Accessible focus outline in acid lime */
@@ -130,6 +130,10 @@ button:focus-visible,
 input:focus-visible,
 textarea:focus-visible,
 select:focus-visible {
-  outline: 2px solid #C6FF3D;
+  outline: 2px solid #24764F;
   outline-offset: 2px;
 }
+
+
+body{background:#fcfcfa;color:#202820;cursor:auto}.film-grain,.vignette{display:none}
+.case-study h1,.case-study h2{font-family:var(--font-serif),Georgia,serif;font-weight:500;letter-spacing:-.02em}.case-study section{border-radius:12px}.case-study .font-mono{font-family:var(--font-sans),sans-serif}.case-study .bg-lime{color:#fff}.case-study h1{line-height:1.1}.case-study .text-offwhite-dim{color:#59645a}

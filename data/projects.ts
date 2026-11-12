@@ -89,7 +89,7 @@ export const projectsData: ProjectCaseStudy[] = [
     reelViewsCount: "1.2M",
     aspectRatio: "9:16",
     accentHue: "#C6FF3D",
-    coverImage: "/images/reels/aura-botanicals.svg",
+    coverImage: "/images/editorial/wellness.jpg",
   },
   {
     slug: "nexus-cloud-sdk",
@@ -142,7 +142,7 @@ export const projectsData: ProjectCaseStudy[] = [
     reelViewsCount: "840K",
     aspectRatio: "9:16",
     accentHue: "#C6FF3D",
-    coverImage: "/images/reels/nexus-cloud-sdk.svg",
+    coverImage: "/images/editorial/technology.jpg",
   },
   {
     slug: "veloce-streetwear",
@@ -195,7 +195,7 @@ export const projectsData: ProjectCaseStudy[] = [
     reelViewsCount: "2.1M",
     aspectRatio: "9:16",
     accentHue: "#C6FF3D",
-    coverImage: "/images/reels/veloce-streetwear.svg",
+    coverImage: "/images/editorial/fashion.jpg",
   },
   {
     slug: "solaris-wealth",
@@ -248,7 +248,7 @@ export const projectsData: ProjectCaseStudy[] = [
     reelViewsCount: "1.7M",
     aspectRatio: "9:16",
     accentHue: "#C6FF3D",
-    coverImage: "/images/reels/solaris-wealth.svg",
+    coverImage: "/images/editorial/finance.jpg",
   },
   {
     slug: "kinetics-lab",
@@ -301,7 +301,7 @@ export const projectsData: ProjectCaseStudy[] = [
     reelViewsCount: "950K",
     aspectRatio: "9:16",
     accentHue: "#C6FF3D",
-    coverImage: "/images/reels/kinetics-lab.svg",
+    coverImage: "/images/editorial/fitness.jpg",
   },
   {
     slug: "lumina-coffee",
@@ -354,6 +354,6 @@ export const projectsData: ProjectCaseStudy[] = [
     reelViewsCount: "1.9M",
     aspectRatio: "9:16",
     accentHue: "#C6FF3D",
-    coverImage: "/images/reels/lumina-coffee.svg",
+    coverImage: "/images/editorial/coffee.jpg",
   },
 ];
